@@ -64,8 +64,8 @@ function SnowCanvas() {
 
 export default function HomePage() {
   const router = useRouter()
-  const [lat, setLat] = useState('38.1290')
-  const [lon, setLon] = useState('42.8080')
+  const [lat, setLat] = useState('38.6500')
+  const [lon, setLon] = useState('42.2300')
   const [from, setFrom] = useState('')
   const [to, setTo]   = useState('')
   const [error, setError] = useState('')
@@ -132,17 +132,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Tarih aralığı (opsiyonel) */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div>
-              <label style={{ display: 'block', fontFamily: mono, fontSize: '0.48rem', letterSpacing: '0.16em', color: 'rgba(120,160,200,0.45)', marginBottom: '0.35rem', textTransform: 'uppercase' }}>Başlangıç (opsiyonel)</label>
-              <input type="date" style={inp} value={from} onChange={e => setFrom(e.target.value)} />
-            </div>
-            <div>
-              <label style={{ display: 'block', fontFamily: mono, fontSize: '0.48rem', letterSpacing: '0.16em', color: 'rgba(120,160,200,0.45)', marginBottom: '0.35rem', textTransform: 'uppercase' }}>Bitiş (opsiyonel)</label>
-              <input type="date" style={inp} value={to} onChange={e => setTo(e.target.value)} />
-            </div>
-          </div>
+          
 
           {/* Hata */}
           {error && (

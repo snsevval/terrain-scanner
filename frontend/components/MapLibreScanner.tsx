@@ -95,7 +95,12 @@ export default function MapLibreScanner({
       const map = new maplibregl.Map({
         container: mapContainer.current!,
         style: `https://api.maptiler.com/maps/hybrid/style.json?key=${key}`,
-        center: [lon, lat], zoom: 12, pitch: 75, bearing: 0, maxPitch: 85,
+        center: [lon, lat],
+        zoom: 12,
+        pitch: 75,
+        bearing: 0,
+        maxPitch: 85,
+        attributionControl: false,
       } as any)
       map.on('load', () => {
         map.addSource('terrainSource', { type: 'raster-dem', url: `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${key}`, tileSize: 256 } as any)
