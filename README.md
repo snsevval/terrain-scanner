@@ -1,6 +1,6 @@
-# MeteoSens Risk Tarayıcı — Standalone
+# Arazi Tarayıcı — Standalone
 
-MeteoSens projesinden bağımsız çalışan Risk Tarayıcı modülü.
+Bağımsız çalışan Risk Tarayıcı modülü.
 
 ```
 meteosens-scanner/
