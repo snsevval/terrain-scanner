@@ -1,9 +1,25 @@
 'use client'
 
-import { useEffect, useMemo, useState, useRef } from 'react'
+import { Suspense, useEffect, useMemo, useState, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { ArrowLeft, MapPin, AlertTriangle } from 'lucide-react'
 import MapLibreScanner from '@/components/MapLibreScanner'
+
+export default function RiskScannerPage() {
+  return (
+    <Suspense
+      fallback={
+        <div style={{ minHeight: '100vh', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ fontFamily: "'Share Tech Mono', 'Courier New', monospace", fontSize: '0.65rem', letterSpacing: '0.2em', color: 'rgba(120,160,200,0.6)' }}>
+            YÜKLENİYOR...
+          </p>
+        </div>
+      }
+    >
+      <RiskScannerContent />
+    </Suspense>
+  )
+}
 
 function SnowCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -61,7 +77,7 @@ function SnowCanvas() {
   return <canvas ref={canvasRef} style={{ position: 'fixed', inset: 0, zIndex: 1, pointerEvents: 'none', opacity: 0.5 }} />
 }
 
-export default function RiskScannerPage() {
+function RiskScannerContent() {
   const router = useRouter()
   const sp = useSearchParams()
 
