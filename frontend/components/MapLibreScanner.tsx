@@ -105,7 +105,6 @@ export default function MapLibreScanner({
       map.on('load', () => {
         map.addSource('terrainSource', { type: 'raster-dem', url: `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${key}`, tileSize: 256 } as any)
         map.setTerrain({ source: 'terrainSource', exaggeration: 1.6 } as any)
-        try { map.addLayer({ id: 'sky', type: 'sky' as any, paint: { 'sky-type': 'atmosphere', 'sky-atmosphere-sun': [0.0, 0.0], 'sky-atmosphere-sun-intensity': 15 } as any } as any) } catch {}
         map.addControl(new maplibregl.NavigationControl({ visualizePitch: true, showZoom: true, showCompass: true }), 'top-right')
         const el = document.createElement('div')
         el.style.cssText = `width:20px;height:20px;background:#00E5FF;border:3px solid white;border-radius:50%;box-shadow:0 0 20px rgba(0,229,255,0.8);`
