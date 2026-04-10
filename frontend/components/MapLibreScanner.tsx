@@ -16,6 +16,7 @@ const mono  = "'Share Tech Mono', 'Courier New', monospace"
 const bebas = "'Bebas Neue', 'Impact', sans-serif"
 
 const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5001'
+console.log("BACKEND URL =", BACKEND);
 
 export default function MapLibreScanner({
   lat, lon, onRiskZonesDetected, onPointSelect,
