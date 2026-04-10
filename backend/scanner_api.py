@@ -40,7 +40,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:3001",
-        "https://terrain-frontend-7vi0.onrender.com",
+        "https://terrain-frontend.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
