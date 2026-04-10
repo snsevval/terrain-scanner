@@ -5,6 +5,7 @@ Open-Elevation API kullanarak eğim (slope) ve bakı (aspect) hesaplar.
 
 import requests
 import math
+
 import logging
 
 logger = logging.getLogger(__name__)
